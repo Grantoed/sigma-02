@@ -1,0 +1,11 @@
+@import "../base/vars";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $main-font;
+  color: $text-color;
+  font-weight: 500;
+}

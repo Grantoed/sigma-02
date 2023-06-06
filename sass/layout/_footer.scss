@@ -1,0 +1,99 @@
+.footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $header-bg-color;
+  .container {
+    margin-left: 78px;
+    margin-right: 78px;
+  }
+}
+
+.footer__logo {
+  font-size: 44px;
+  line-height: 1.5;
+  color: $hero-title-color;
+}
+
+.footer__slogan {
+  margin-top: 20px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-top: 58px;
+}
+
+.footer__nav-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__group-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.24;
+  color: $alt-title-color;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  gap: 12px;
+  font-size: 18px;
+  line-height: 1.24;
+}
+
+.footer__nav-link {
+  color: $text-color;
+}
+
+.footer__socials {
+  margin-top: 58px;
+}
+
+.footer__socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer__socials-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.stores {
+  display: flex;
+  flex-direction: column;
+  width: 214px;
+  margin-top: 41px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stores__text {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.stores__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.stores__icon {
+  width: 100px;
+  height: 35px;
+}
+
+.footer__copyright {
+  margin-top: 58px;
+  font-size: 14px;
+  line-height: 1.25;
+  text-align: center;
+}

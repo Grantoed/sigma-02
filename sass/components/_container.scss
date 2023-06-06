@@ -1,0 +1,13 @@
+// @import "../base/mixins";
+
+.container {
+  max-width: 414px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desktop {
+    max-width: 1440px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}

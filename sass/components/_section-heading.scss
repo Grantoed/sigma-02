@@ -1,0 +1,11 @@
+// @import "../base/mixins";
+// @import "../base/vars";
+
+.section-heading {
+  font-family: $heading-font;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.3;
+  text-align: center;
+  color: $section-title-color;
+}

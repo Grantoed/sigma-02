@@ -1,0 +1,145 @@
+.steps {
+  .container {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 75px;
+    padding-left: 17px;
+    padding-right: 11px;
+    overflow: hidden;
+  }
+}
+
+.steps__subheading {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 90px;
+}
+
+.steps__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.steps__name {
+  font-weight: 700;
+}
+
+.steps__text {
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.advert {
+  max-width: 300px;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  border-radius: 26px;
+  box-shadow: 74px -75px 81px -90px rgba(89, 177, 230, 1),
+    0px 100px 80px rgba(0, 0, 0, 0.02),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+    0px 20px 13px rgba(0, 0, 0, 0.01),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+}
+
+.advert__image {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 1px solid #000000;
+  border-radius: 24px;
+}
+
+.advert__name {
+  margin-top: 23px;
+  font-size: 18px;
+  color: $alt-title-color;
+}
+
+.advert__details {
+  display: flex;
+  margin-top: 12px;
+  gap: 25px;
+  color: $alt-text-color;
+}
+
+.advert__time {
+  max-width: 50px;
+}
+
+.advert__author {
+  &::before {
+    content: "|";
+    margin-right: 4px;
+    font-weight: 400;
+  }
+}
+
+.advert__icon-list {
+  display: flex;
+  margin-top: 16px;
+  gap: 15px;
+}
+
+.advert__icon {
+  width: 29px;
+  height: 31px;
+}
+
+.advert__stats-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.advert__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+}
+
+.advert__building-icon {
+  width: 13px;
+  height: 14px;
+}
+
+.advert__like-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.advert__popup {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.steps__pluses {
+  position: absolute;
+
+  &--top {
+    top: -40px;
+    left: -50px;
+  }
+
+  &--bottom {
+    transform: scaleY(-1);
+    bottom: -74px;
+    right: 21px;
+  }
+}

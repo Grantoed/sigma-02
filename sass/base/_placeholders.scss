@@ -1,0 +1,12 @@
+// @import "../base/mixins";
+// @import "../base/vars";
+
+%deco-element {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: $header-bg-color;
+  border-radius: 18px 5px 10px;
+}
