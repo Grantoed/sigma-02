@@ -948,6 +948,10 @@ img {
   padding-bottom: 25px;
   background-color: #fff1da;
 }
+.footer .container {
+  padding-left: 82px;
+  padding-right: 82px;
+}
 
 .footer__logo {
   font-size: 44px;

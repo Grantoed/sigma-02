@@ -2,6 +2,10 @@
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: $header-bg-color;
+  .container {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
 }
 
 .footer__logo {
