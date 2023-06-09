@@ -321,6 +321,9 @@ img {
 .header__nav-link {
   color: inherit;
 }
+.header__nav-link:focus {
+  color: #df6951;
+}
 
 .auth {
   display: -webkit-box;
@@ -1323,7 +1326,8 @@ img {
 }
 
 .partners__item {
-  scale: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   border-radius: 10px;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1335,7 +1339,8 @@ img {
   }
 }
 .partners__item:hover {
-  scale: 1.1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
           box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
 }

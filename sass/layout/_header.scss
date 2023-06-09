@@ -145,6 +145,9 @@
 
 .header__nav-link {
   color: inherit;
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .auth {

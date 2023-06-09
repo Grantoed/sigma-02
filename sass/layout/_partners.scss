@@ -21,7 +21,7 @@
 }
 
 .partners__item {
-  scale: 1;
+  transform: scale(1);
   border-radius: 10px;
   transition: all $transition;
   @include mobile-only {
@@ -29,7 +29,7 @@
   }
 
   &:hover {
-    scale: 1.1;
+    transform: scale(1.1);
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
       0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
       0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
