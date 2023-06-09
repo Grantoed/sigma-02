@@ -1,11 +1,33 @@
 .testimonials {
   .container {
     padding-top: 75px;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.testimonials__heading-wrapper {
+  @include desktop {
+    width: 410px;
+  }
+}
+
+.testimonials__subheading {
+  @include desktop {
+    text-align: left;
+    text-transform: uppercase;
   }
 }
 
 .testimonials__section-heading {
   margin-top: 27px;
+  @include desktop {
+    margin-top: 8px;
+    text-align: left;
+  }
 }
 
 .testimonials__card {
@@ -21,26 +43,40 @@
     0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
     0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
   border-radius: 10px;
+  @include desktop {
+    position: relative;
+    width: 540px;
+    padding-top: 28px;
+    padding-bottom: 34px;
+    padding-left: 34px;
+    padding-right: 68px;
+  }
 }
 
 .testimonials__avatar {
   width: 68px;
   height: 68px;
+  @include desktop {
+    position: absolute;
+    top: -32px;
+    left: -36px;
+  }
 }
 .testimonials__text {
-  align-self: flex-start;
   line-height: 2;
 }
 
 .testimonials__name {
-  margin-top: 30px;
+  margin-top: 35px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
+  align-self: flex-start;
 }
 
 .testimonials__location {
   margin-top: 5px;
   font-size: 14px;
   line-height: 1.5;
+  align-self: flex-start;
 }

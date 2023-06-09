@@ -1,18 +1,32 @@
-// @import "../base/mixins";
-// @import "../base/vars";
-
 .hero {
   .container {
     position: relative;
-    padding-top: 75px;
-    padding-bottom: 45px;
-    padding-left: 60px;
-    padding-right: 43px;
-    overflow: hidden;
+    @include mobile-only {
+      padding-left: 60px;
+      padding-right: 43px;
+      padding-top: 75px;
+      padding-bottom: 45px;
+      overflow: hidden;
+    }
+    @include desktop {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+  }
+}
+
+.hero__text-wrapper {
+  @include desktop {
+    width: 550px;
   }
 }
 
 .hero__slogan {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $accent-color;
   @include mobile-only {
     display: none;
   }
@@ -24,9 +38,17 @@
   font-size: 48px;
   line-height: 1.85;
   color: $hero-title-color;
+  @include desktop {
+    margin-top: 24px;
+    font-size: 84px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
 }
 
 .hero__text {
+  margin-top: 30px;
+  line-height: 1.88;
   @include mobile-only {
     display: none;
   }
@@ -38,6 +60,10 @@
   align-items: center;
   gap: 40px;
   margin-top: 60px;
+  @include desktop {
+    margin-top: 34px;
+    flex-direction: row;
+  }
 }
 
 .cta__btn {
@@ -76,11 +102,39 @@
   }
 }
 
+.hero__image {
+  position: absolute;
+  top: 23px;
+  right: 100px;
+  @include mobile-only {
+    display: none;
+  }
+}
+
 .hero__plane {
   position: absolute;
-  top: 0;
-  left: 0;
   transition: transform $transition 3s;
+
+  &_top {
+    @include mobile-only {
+      top: 0;
+      left: 0;
+    }
+    @include desktop {
+      top: 100px;
+      right: 590px;
+    }
+  }
+
+  &_bottom {
+    @include mobile-only {
+      display: none;
+    }
+    @include desktop {
+      top: 150px;
+      right: 70px;
+    }
+  }
 
   &:hover {
     animation: movePlane 3s;
@@ -91,4 +145,7 @@
   position: absolute;
   bottom: 63px;
   right: -72px;
+  @include desktop {
+    display: none;
+  }
 }

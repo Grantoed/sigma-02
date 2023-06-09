@@ -6,4 +6,7 @@
   font-weight: 600;
   line-height: 1.5;
   text-align: center;
+  @include desktop {
+    font-size: 18px;
+  }
 }

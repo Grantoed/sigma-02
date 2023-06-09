@@ -1,19 +1,25 @@
-// @import "../base/mixins";
-// @import "../base/vars";
-
 .header {
-  padding-top: 35px;
-  padding-bottom: 35px;
   @include mobile-only {
+    padding-top: 35px;
+    padding-bottom: 35px;
     background-color: $header-bg-color;
   }
+  @include desktop {
+    position: relative;
+  }
   .container {
-    padding-left: 52px;
-    padding-right: 38px;
+    @include mobile-only {
+      padding-left: 52px;
+      padding-right: 38px;
+    }
+    @include desktop {
+      padding-top: 47px;
+    }
   }
 }
 
 .logo {
+  display: block;
   width: 115px;
   height: 34px;
 
@@ -63,13 +69,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
   padding: 5px;
   font-family: $alt-font;
   font-size: 17px;
   font-weight: 500;
   color: $nav-color;
   cursor: pointer;
+
+  @include mobile-only {
+    margin-right: 20px;
+  }
+
+  @include desktop {
+    margin-left: 40px;
+  }
 
   &__icon {
     width: 14px;
@@ -101,7 +114,81 @@
 }
 
 .header__desktop-wrapper {
+  display: flex;
   @include mobile-only {
     display: none;
+  }
+}
+
+.header__desktop-nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.header__nav-item {
+  font-size: 17px;
+  line-height: 1.29;
+  color: $nav-color;
+  transition: all $transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    transform: scale(1.1);
+  }
+}
+
+.header__nav-link {
+  color: inherit;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  margin-left: 65px;
+  gap: 45px;
+}
+
+.auth__link {
+  font-size: 17px;
+  line-height: 1.29;
+  color: $nav-color;
+  transition: all $transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    transform: scale(1.1);
+  }
+}
+
+.auth__button {
+  min-width: 102px;
+  padding: 10px 18px;
+  font-size: 17px;
+  line-height: 1.29;
+  color: $nav-color;
+  border: 1px solid $nav-color;
+  border-radius: 5px;
+  transition: all $transition;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: $accent-color;
+  }
+}
+
+.stain-decor {
+  display: none;
+  @include desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
   }
 }

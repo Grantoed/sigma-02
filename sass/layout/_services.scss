@@ -1,11 +1,14 @@
-// @import "../base/mixins";
-// @import "../base/vars";
-
 .services {
   .container {
     padding-top: 75px;
-    padding-left: 63px;
-    padding-right: 69px;
+    @include mobile-only {
+      padding-left: 63px;
+      padding-right: 69px;
+    }
+    @include desktop {
+      position: relative;
+      padding-top: 100px;
+    }
   }
 }
 
@@ -15,6 +18,9 @@
 
 .services__section-heading {
   margin-top: 25px;
+  @include desktop {
+    margin-top: 10px;
+  }
 }
 
 .services__view-more {
@@ -24,8 +30,10 @@
   font-size: 20px;
   line-height: 2.25;
   text-align: center;
-
   color: $mobile-nav-color;
+  @include desktop {
+    display: none;
+  }
 }
 
 .services__list {
@@ -35,6 +43,9 @@
   justify-content: center;
   gap: 45px;
   margin-top: 15px;
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 .services__item {
@@ -104,6 +115,18 @@
   right: 51px;
   transform: rotate(270deg);
 }
+.services__mic::after {
+  @extend %deco-element;
+  top: -7px;
+  right: -25px;
+  transform: rotate(90deg);
+}
+.services__customization::after {
+  @extend %deco-element;
+  top: 16px;
+  right: -29px;
+  transform: rotate(270deg);
+}
 
 .services__icon {
   position: relative;
@@ -141,4 +164,7 @@
   @include mobile-only {
     display: none;
   }
+  position: absolute;
+  top: 0;
+  right: 0;
 }

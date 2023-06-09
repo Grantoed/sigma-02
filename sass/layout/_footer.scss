@@ -1,10 +1,44 @@
 .footer {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: $header-bg-color;
+  @include mobile-only {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $header-bg-color;
+  }
+  @include desktop {
+    position: relative;
+    padding-top: 166px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -279px;
+      right: -363px;
+      display: block;
+      width: 478.94px;
+      height: 496.86px;
+      background: #d5aee4;
+      opacity: 0.8;
+      filter: blur(75px);
+    }
+  }
   .container {
-    padding-left: 82px;
-    padding-right: 82px;
+    @include mobile-only {
+      padding-left: 82px;
+      padding-right: 82px;
+    }
+  }
+}
+
+.footer__wrapper {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.footer__logo-wrapper {
+  @include desktop {
+    max-width: 207px;
   }
 }
 
@@ -16,13 +50,23 @@
 
 .footer__slogan {
   margin-top: 20px;
+  @include desktop {
+    font-size: 13px;
+    line-height: 1.23;
+  }
 }
 
 .footer__nav {
   display: flex;
-  flex-direction: column;
   gap: 45px;
-  margin-top: 58px;
+  @include mobile-only {
+    flex-direction: column;
+    margin-top: 58px;
+  }
+  @include desktop {
+    gap: 80px;
+    margin-left: 80px;
+  }
 }
 
 .footer__nav-group {
@@ -51,14 +95,21 @@
 }
 
 .footer__socials {
-  margin-top: 58px;
+  @include mobile-only {
+    margin-top: 58px;
+  }
+  @include desktop {
+    margin-left: 80px;
+  }
 }
 
 .footer__socials-list {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
+  @include mobile-only {
+    justify-content: center;
+  }
 }
 
 .footer__socials-icon {
@@ -73,6 +124,9 @@
   margin-top: 41px;
   margin-left: auto;
   margin-right: auto;
+  @include desktop {
+    margin-top: 35px;
+  }
 }
 
 .stores__text {

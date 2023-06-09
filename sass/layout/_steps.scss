@@ -1,11 +1,24 @@
 .steps {
   .container {
     position: relative;
-    padding-top: 120px;
-    padding-bottom: 75px;
-    padding-left: 17px;
-    padding-right: 11px;
     overflow: hidden;
+    @include mobile-only {
+      padding-top: 120px;
+      padding-bottom: 75px;
+      padding-left: 17px;
+      padding-right: 11px;
+    }
+    @include desktop {
+      display: flex;
+      padding-top: 60px;
+      padding-bottom: 120px;
+    }
+  }
+}
+
+.steps__text-wrapper {
+  @include desktop {
+    max-width: 510px;
   }
 }
 
@@ -38,7 +51,7 @@
 }
 
 .advert {
-  max-width: 300px;
+  width: 300px;
   margin-top: 90px;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +68,11 @@
     0px 20px 13px rgba(0, 0, 0, 0.01),
     0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
     0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  @include desktop {
+    position: relative;
+    width: 370px;
+    height: 400px;
+  }
 }
 
 .advert__image {
@@ -124,20 +142,89 @@
 }
 
 .advert__popup {
+  position: absolute;
+  bottom: 66px;
+  right: -90px;
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 25px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+    0px 20px 13px rgba(0, 0, 0, 0.01),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
   @include mobile-only {
     display: none;
   }
 }
 
+.advert__popup-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.advert__popup-name {
+  margin-top: 6px;
+  font-size: 18px;
+  line-height: 1.24;
+  letter-spacing: -0.015em;
+  color: $alt-title-color;
+}
+
+.advert__progress {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.24;
+  letter-spacing: -0.055em;
+  color: $alt-title-color;
+}
+
+.advert__progress-bar {
+  display: block;
+  margin-top: 10px;
+  width: 156px;
+  height: 5px;
+  border-radius: 30px;
+  background-color: $statusbar-alt-color;
+  &_filled {
+    display: block;
+    width: 40%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: $statusbar-color;
+  }
+}
+
+.advert__percentage {
+  color: $statusbar-color;
+}
+
+.advert__status {
+  font-size: 14px;
+  line-height: 1.24;
+  letter-spacing: -0.035em;
+  color: $alt-text-color;
+}
+
 .steps__pluses {
   position: absolute;
+  @include desktop {
+    display: none;
+  }
 
-  &--top {
+  &_top {
     top: -40px;
     left: -50px;
   }
 
-  &--bottom {
+  &_bottom {
     transform: scaleY(-1);
     bottom: -74px;
     right: 21px;

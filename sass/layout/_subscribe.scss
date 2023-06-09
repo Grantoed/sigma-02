@@ -1,22 +1,99 @@
 .subscribe {
   .container {
     position: relative;
-    padding-top: 75px;
-    padding-bottom: 58px;
-    padding-left: 35px;
-    padding-right: 35px;
+    @include mobile-only {
+      padding-top: 75px;
+      padding-bottom: 58px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @include desktop {
+      padding-top: 124px;
+    }
+  }
+}
+
+.subscribe__wrapper {
+  @include desktop {
+    position: relative;
+    width: 1170px;
+    height: 407px;
+    padding: 80px 150px;
+    background-color: $sub-bg-color;
+    border-radius: 129px 20px 20px 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -85px;
+    bottom: 0;
+    display: block;
+    width: 480px;
+    height: 361px;
+    background-image: url("../../images/sub-decor.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -44px;
+    right: -108px;
+    display: block;
+    width: 264px;
+    height: 351px;
+    background-image: url("../../images/sub-decor.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(270deg);
+    @include mobile-only {
+      display: none;
+    }
   }
 }
 
 .subscribe__title {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 1.64;
+  text-align: center;
+  color: $text-color;
   @include mobile-only {
     display: none;
   }
 }
 
 .subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  margin-top: 74px;
   @include mobile-only {
     display: none;
+  }
+}
+
+.subscribe__input {
+  width: 421px;
+  height: 68px;
+  padding: 28px 25px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  z-index: 1;
+
+  &::placeholder {
+    font-family: $placeholder-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+    color: $placeholder-color;
   }
 }
 
@@ -33,26 +110,42 @@
   color: #fff;
   background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
   border-radius: 10px;
+  @include desktop {
+    min-width: 180px;
+    height: 68px;
+  }
 
-  &--mobile {
-    @include mobile-only {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+  &_mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop {
+      display: none;
     }
-    display: none;
   }
 }
 
 .subscribe__icon {
   position: absolute;
-  bottom: 57px;
-  right: 0;
-  width: 61px;
-  height: 56px;
+  @include mobile-only {
+    bottom: 57px;
+    right: 40px;
+    width: 61px;
+    height: 56px;
+  }
+  @include desktop {
+    top: -30px;
+    right: -30px;
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .subscribe__pluses {
+  position: absolute;
+  right: -120px;
+  bottom: -95px;
+  transform: rotate(90deg);
   @include mobile-only {
     display: none;
   }
