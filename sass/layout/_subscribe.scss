@@ -9,6 +9,8 @@
     }
     @include desktop {
       padding-top: 124px;
+      padding-bottom: 90px;
+      overflow: hidden;
     }
   }
 }
@@ -143,8 +145,8 @@
 
 .subscribe__pluses {
   position: absolute;
-  right: -120px;
-  bottom: -95px;
+  right: 10px;
+  bottom: 0px;
   transform: rotate(90deg);
   @include mobile-only {
     display: none;

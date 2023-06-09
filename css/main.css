@@ -1370,6 +1370,8 @@ img {
 @media (min-width: 1200px) {
   .subscribe .container {
     padding-top: 124px;
+    padding-bottom: 90px;
+    overflow: hidden;
   }
 }
 
@@ -1551,8 +1553,8 @@ img {
 
 .subscribe__pluses {
   position: absolute;
-  right: -120px;
-  bottom: -95px;
+  right: 10px;
+  bottom: 0px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -1572,7 +1574,7 @@ img {
 @media (min-width: 1200px) {
   .footer {
     position: relative;
-    padding-top: 166px;
+    padding-top: 80px;
     padding-bottom: 80px;
     overflow: hidden;
   }
