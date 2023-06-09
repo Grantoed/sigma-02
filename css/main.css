@@ -1398,7 +1398,7 @@ img {
   display: block;
   width: 480px;
   height: 361px;
-  background-image: url("../../images/sub-decor.png");
+  background-image: url("../images/sub-decor.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1415,7 +1415,7 @@ img {
   display: block;
   width: 264px;
   height: 351px;
-  background-image: url("../../images/sub-decor.png");
+  background-image: url("../images/sub-decor.png");
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transform: rotate(270deg);
